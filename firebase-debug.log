@@ -1,0 +1,81 @@
+[debug] [2023-12-23T11:46:36.150Z] ----------------------------------------------------------------------
+[debug] [2023-12-23T11:46:36.151Z] Command:       /usr/local/bin/node /Users/rishabhostwal/Web Development practice/React Practice/Vanlife/node_modules/.bin/firebase deploy --debug
+[debug] [2023-12-23T11:46:36.151Z] CLI Version:   13.0.2
+[debug] [2023-12-23T11:46:36.151Z] Platform:      darwin
+[debug] [2023-12-23T11:46:36.151Z] Node Version:  v18.16.0
+[debug] [2023-12-23T11:46:36.154Z] Time:          Sat Dec 23 2023 17:16:36 GMT+0530 (India Standard Time)
+[debug] [2023-12-23T11:46:36.154Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-12-23T11:46:36.187Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-12-23T11:46:36.187Z] > authorizing via signed-in user (rishabh.ostwal79@gmail.com)
+[debug] [2023-12-23T11:46:36.187Z] [iam] checking project vanlife-b589f for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-12-23T11:46:36.188Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/vanlife-b589f:testIamPermissions [none]
+[debug] [2023-12-23T11:46:36.188Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/vanlife-b589f:testIamPermissions x-goog-quota-user=projects/vanlife-b589f
+[debug] [2023-12-23T11:46:36.189Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vanlife-b589f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-23T11:46:38.845Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/vanlife-b589f:testIamPermissions 200
+[debug] [2023-12-23T11:46:38.846Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/vanlife-b589f:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-12-23T11:46:38.848Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/vanlife-b589f [none]
+[debug] [2023-12-23T11:46:39.346Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/vanlife-b589f 200
+[debug] [2023-12-23T11:46:39.347Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/vanlife-b589f {"projectId":"vanlife-b589f","projectNumber":"53661267177","displayName":"vanlife","name":"projects/vanlife-b589f","resources":{"hostingSite":"vanlife-b589f"},"state":"ACTIVE","etag":"1_86ecc850-cc64-4198-9187-10aed5127140"}
+[info] 
+[info] === Deploying to 'vanlife-b589f'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-12-23T11:46:39.355Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/versions [none]
+[debug] [2023-12-23T11:46:39.355Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-12-23T11:46:40.676Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/versions 200
+[debug] [2023-12-23T11:46:40.676Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/versions {"name":"projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[vanlife-b589f]: beginning deploy... 
+[info] i  hosting[vanlife-b589f]: found 5 files in dist 
+[debug] [2023-12-23T11:46:40.688Z] [hosting] uploading with 200 concurrency
+[debug] [2023-12-23T11:46:40.691Z] [hosting] hash cache [ZGlzdA] stored for 5 files
+[debug] [2023-12-23T11:46:40.691Z] [hosting][hash queue][FINAL] {"max":0,"min":0,"avg":0,"active":0,"complete":5,"success":5,"errored":0,"retried":0,"total":5,"elapsed":2}
+[debug] [2023-12-23T11:46:40.692Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48:populateFiles [none]
+[debug] [2023-12-23T11:46:40.692Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48:populateFiles {"files":{"/index.html":"0165b2f09a2973df8832eae2304c66faaa4f70f5bb2912cea582d57034193aea","/assets/about-hero-u-8Wv6BW.png":"7ad3866df7ed44b5e1845b6b8aaf8fba3f8a7588d9768988db580e2d98b8ad3c","/assets/home-hero-k03NpkBX.png":"72313cdee700c9c6f2cea7bf70fb183f4e2a9536e6a4385b9448815fb2968eb1","/assets/index-DNMavEbA.js":"324ff1fcdae99707be00309f1458752c5db208763c171b58f4152b9bbf5e3fb4","/assets/index-mHkQ4Tq2.css":"4e91fa7855bca70d2f682f9001e8390be3c391decee37911b7cd1f99244cb61d"}}
+[debug] [2023-12-23T11:46:41.803Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48:populateFiles 200
+[debug] [2023-12-23T11:46:41.804Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/vanlife-b589f/versions/9124121db2779d48/files"}
+[debug] [2023-12-23T11:46:41.804Z] [hosting][populate queue][FINAL] {"max":1114,"min":1114,"avg":1114,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1114}
+[debug] [2023-12-23T11:46:41.804Z] [hosting] uploads queued: 0
+[debug] [2023-12-23T11:46:41.805Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1703332001805}
+[info] i  hosting: upload complete 
+[info] ✔  hosting[vanlife-b589f]: file upload complete 
+[debug] [2023-12-23T11:46:41.806Z] [hosting] deploy completed after 1127ms
+[debug] [2023-12-23T11:46:41.806Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "vanlife-b589f"
+    },
+    "version": "projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48"
+  }
+]
+[info] i  hosting[vanlife-b589f]: finalizing version... 
+[debug] [2023-12-23T11:46:41.809Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/versions/9124121db2779d48 updateMask=status%2Cconfig
+[debug] [2023-12-23T11:46:41.810Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/versions/9124121db2779d48 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-12-23T11:46:43.043Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/versions/9124121db2779d48 200
+[debug] [2023-12-23T11:46:43.044Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/versions/9124121db2779d48 {"name":"projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-12-23T11:46:40.330219Z","createUser":{"email":"rishabh.ostwal79@gmail.com"},"finalizeTime":"2023-12-23T11:46:42.865388Z","finalizeUser":{"email":"rishabh.ostwal79@gmail.com"}}
+[debug] [2023-12-23T11:46:43.044Z] [hosting] finalized version for vanlife-b589f:[object Object]
+[info] ✔  hosting[vanlife-b589f]: version finalized 
+[info] i  hosting[vanlife-b589f]: releasing new version... 
+[debug] [2023-12-23T11:46:43.045Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/channels/live/releases versionName=projects%2F53661267177%2Fsites%2Fvanlife-b589f%2Fversions%2F9124121db2779d48
+[debug] [2023-12-23T11:46:43.045Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/channels/live/releases {}
+[debug] [2023-12-23T11:46:44.255Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/channels/live/releases 200
+[debug] [2023-12-23T11:46:44.256Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/vanlife-b589f/channels/live/releases {"name":"projects/53661267177/sites/vanlife-b589f/channels/live/releases/1703332003558000","version":{"name":"projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-12-23T11:46:40.330219Z","createUser":{"email":"rishabh.ostwal79@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLxcfXgM6M44UFi3AaEJ8io8no8OdS4mtz9bn5Lb14-=mo"},"finalizeTime":"2023-12-23T11:46:42.865388Z","finalizeUser":{"email":"rishabh.ostwal79@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLxcfXgM6M44UFi3AaEJ8io8no8OdS4mtz9bn5Lb14-=mo"}},"type":"DEPLOY","releaseTime":"2023-12-23T11:46:43.558Z","releaseUser":{"email":"rishabh.ostwal79@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLxcfXgM6M44UFi3AaEJ8io8no8OdS4mtz9bn5Lb14-=mo"}}
+[debug] [2023-12-23T11:46:44.256Z] [hosting] release: {"name":"projects/53661267177/sites/vanlife-b589f/channels/live/releases/1703332003558000","version":{"name":"projects/53661267177/sites/vanlife-b589f/versions/9124121db2779d48","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-12-23T11:46:40.330219Z","createUser":{"email":"rishabh.ostwal79@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLxcfXgM6M44UFi3AaEJ8io8no8OdS4mtz9bn5Lb14-=mo"},"finalizeTime":"2023-12-23T11:46:42.865388Z","finalizeUser":{"email":"rishabh.ostwal79@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLxcfXgM6M44UFi3AaEJ8io8no8OdS4mtz9bn5Lb14-=mo"}},"type":"DEPLOY","releaseTime":"2023-12-23T11:46:43.558Z","releaseUser":{"email":"rishabh.ostwal79@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ACg8ocLxcfXgM6M44UFi3AaEJ8io8no8OdS4mtz9bn5Lb14-=mo"}}
+[info] ✔  hosting[vanlife-b589f]: release complete 
+[info] 
+[info] ✔  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/vanlife-b589f/overview
+[info] Hosting URL: https://vanlife-b589f.web.app
